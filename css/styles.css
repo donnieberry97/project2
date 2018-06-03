@@ -147,11 +147,15 @@ h2.main {
     padding: 1em 0em;
 }
 
+
+
+
 #content2button {
     padding: 1em 0em;
 }
 
 #content2{
+    grid-area: content2button;
     border:0;
     background-color: #d53362;
     color: white;
@@ -169,4 +173,166 @@ h2.main {
     height:7px;
     width:90px;
     display: block;
+}
+
+#useMobile {
+    display: none;
+}
+
+.wrap1 {
+    display: none;
+}
+
+#desktopNavbar {
+    display: none;
+}
+
+    ul.sideNav {
+        margin-top: 66px;
+        list-style: none;
+    }
+    
+
+    li.sideNav a {
+        color:white;
+        text-decoration: none;
+        display: block;
+        padding: 2em 1em;
+        transition: 0.4s ease;
+        border-bottom: 1px solid #111;
+    }
+    
+    li.sideNav a:last-of-type {
+        border-right: 1px solid #111;
+    }
+    
+    li.sideNav a:hover {
+        background-color: #d53362;
+        transition: 0.4s ease;
+    }
+    
+    .active {
+        background-color: #d53362;
+    }
+
+
+@media (min-width:768px) {
+    #desktopNavbar {
+        display: block;
+    }
+    .container {
+        max-width: 950px;
+        padding:0;
+    }
+    
+    #content-1 {
+        margin-top: 0px;
+    }
+    
+    #content2button {
+        grid-area: content2button;
+        text-align: center;
+    }
+    
+    #content2 {
+        border-radius: 5px;
+        font-size: 1em;
+        padding:0;
+        width: 100%;
+        height:40px; 
+    }
+    
+    .content2container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-column-gap: 2em;
+        grid-template-areas: 
+            "wrap1 wrap2"
+            "wrap1 content2button"
+    }
+    
+    #content1content {
+        padding: 13em;
+    }
+    
+    p.main {
+    font-size: 1em;
+}
+
+    p.third {
+        line-height: 2em;
+        color:#888;
+        font-size: 1.0em;
+        text-align: left;
+    }
+    p.second {
+        line-height: 2em;
+        color:#444;
+        font-size: 1.05em
+    }
+
+    h1.main {
+        font-weight: 700;
+        font-size: 4em;
+    }
+
+    .wrap1 {
+    grid-area: wrap1;
+        display: block;
+}
+
+    .wrap2 {
+    grid-area: wrap2;
+}    
+    #navbar {
+        display: none;
+    }
+    
+    h2.main {
+        font-weight: 500;
+        font-size: 1.5em;
+        color: #0f9494;
+    }
+    
+    #desktopNavbar {
+        background-color: #0f9494;
+          box-shadow: 0 3px 28px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+    }
+    
+    .desktopnavcontainer {
+        margin:0 auto;
+        max-width: 950px;
+        text-align: right;
+    }
+    
+    ul.mainNav {
+        list-style: none;
+    }
+    
+    li.mainNav {
+        display: inline-block;
+    }
+    
+    li.mainNav a {
+        color:white;
+        text-decoration: none;
+        display: block;
+        padding: 2em 1em;
+        transition: 0.4s ease;
+        border-left: 1px solid #0c7575;
+    }
+    
+    li.mainNav a:last-of-type {
+        border-right: 1px solid #0c7575;
+    }
+    
+    li.mainNav a:hover {
+        background-color: #d53362;
+        transition: 0.4s ease;
+    }
+    
+    .active {
+        background-color: #d53362;
+    }
 }

@@ -10,6 +10,11 @@
     <title>Website 2</title>
 </head>
 <body>
+
+<div id="useMobile">
+    <h1>USE THIS ON MOBILE, DESKTOP VERSION NOT AVAILABLE</h1>
+</div>
+
 <div id="app">
             <div id="navbarContentHamburgerClick">
                 <div id="navbarContentHamburger" @click="toggleMenu()">
@@ -17,6 +22,18 @@
                 </div>
             </div>
 <div id="gridContainer">
+   
+   <div id="desktopNavbar">
+       <div class="desktopnavcontainer">
+           <ul class="mainNav">
+               <li class="mainNav"><a href="#" class="active">Home</a>
+               <li class="mainNav"><a href="#">Projects</a>
+               <li class="mainNav"><a href="#">Gallery</a>
+               <li class="mainNav"><a href="#">Contact</a>
+           </ul>
+       </div>
+   </div>
+   
     <div id="navbar">
         <div class="navcontainer">
             <div id="navbarContent">
@@ -27,6 +44,12 @@
         </div>
     </div>
 <div id="sidebar" v-bind:class="{'open': isOpen}">
+           <ul class="sideNav">
+               <li class="sideNav"><a href="#" class="active">Home</a>
+               <li class="sideNav"><a href="#">Projects</a>
+               <li class="sideNav"><a href="#">Gallery</a>
+               <li class="sideNav"><a href="#">Contact</a>
+           </ul>
 </div>
     <div id="content-1">
         <div class="container">
@@ -47,16 +70,21 @@
                 <h2 class="main">Fusce tempus, nisl nec tempor ullamcorper, massa metus ultrices massa.</h2>
                 <span class="spanLine"></span>
                 <p class="second">nec blandit lectus quam at nunc. Nulla tellus urna, eleifend at dictum et, imperdiet ac enim. Cras congue nisi vitae eros suscipit, et faucibus magna euismod. </p>
-                <div class="content2about">
-                    <p class="third">Cras auctor vitae ipsum at luctus. Quisque lobortis interdum sollicitudin. Praesent a finibus nisl, non rhoncus nisl. Cras lectus tortor, placerat ut lacus nec, </p>
+                <div class="content2container">
+                <div class="content2about wrap1">
+                    <p class="third">Cras suscipit justo ac aliquet elementum. Phasellus quis diam posuere, sollicitudin quam eu, ultrices justo. Nunc nisl lacus, hendrerit a mattis at, rutrum nec leo. Morbi maximus hendrerit elit, vel tincidunt neque commodo ac. Aliquam erat volutpat. Nam faucibus lectus nisi, sit amet rutrum arcu viverra in. Nunc ultrices massa at viverra molestie.</p>
                 </div>
-                <div class="content2about">
+                <div class="content2about wrap2">
                     <p class="third">pellentesque commodo orci. Nam fringilla posuere ipsum. Donec condimentum placerat est, ac interdum magna porttitor ut. Duis pellentesque sagittis sagittis.</p>
                 </div>
                 
                 <div id="content2button">
                     <button id="content2">Read more</button>
                 </div>
+                
+                </div>
+                
+                
             </div>
         </div>
     </div>
