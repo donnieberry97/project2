@@ -127,6 +127,7 @@ h2.main {
 
 #content-1 {
     grid-area: content1;
+    margin-top: 49px;
     background:linear-gradient(
                      rgba(20,20,20, .3), 
                      rgba(20,20,20, .3)), url(../img/coverimage.jpeg);
