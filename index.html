@@ -6,23 +6,28 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <title>Website 2</title>
 </head>
 <body>
+<div id="app">
+            <div id="navbarContentHamburgerClick">
+                <div id="navbarContentHamburger" @click="toggleMenu()">
 
+                </div>
+            </div>
 <div id="gridContainer">
     <div id="navbar">
         <div class="navcontainer">
             <div id="navbarContent">
-                <div id="navbarContentHamburger">
-
-                </div>
                 <div id="navbarContentMenu">
                         <h4>MENU</h4>
                 </div>
             </div>
         </div>
     </div>
+<div id="sidebar" v-bind:class="{'open': isOpen}">
+</div>
     <div id="content-1">
         <div class="container">
             <div id="content1content">
@@ -56,6 +61,8 @@
         </div>
     </div>
 </div>
+</div>
+<script src="js/scripts.js"></script>
 
 </body>
 </html>
