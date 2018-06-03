@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5 {
         "content1";
 }
 
+#navbarContentHamburger {
+    background-image: url(../img/iconfinder-icon.svg);
+    background-size: contain;
+}
+
 #navbar {
     background-color: #011638;
     grid-area: navbar;
@@ -32,28 +37,37 @@ h1, h2, h3, h4, h5 {
     max-width: 300px;
 }
 
+.navcontainer {
+    margin: 0 auto;
+    max-width: 350px;
+}
+
 #navbarContent {
     padding: 0.5em 0em;
-    font-size: 1.375em;
+    font-size: 18px;
     color:#fff;
     font-weight: 600;
     display:grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 8% 92%;
 }
 
 #content1content {
     text-align: center;
     color:white;
     padding: 4em 0em;
-
 }
+
+#navbarContentMenu {
+    margin-left: 10px;
+}
+
 
 #content1header {
     margin-bottom: 20px;
 }
 
 p.main {
-    font-size: 1em;
+    font-size: 14px;
 }
 
 h1.main {
