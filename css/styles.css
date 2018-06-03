@@ -1,0 +1,171 @@
+* {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+html {
+	line-height: 1.6 !important;
+      -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+h1, h2, h3, h4, h5 {
+	line-height: 1.2 !important;
+}
+
+#gridContainer {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "navbar"
+        "content1"
+        "content2";
+}
+
+#navbarContentHamburger {
+    background-image: url(../img/657904-64.png);
+    background-size: contain;
+    z-index: 6;
+    position: fixed;
+    width: 23px;
+    height: 20px;
+    top: 16px;
+    left:20px;
+}
+
+
+.open {
+    width: 100% !important;
+    transition: 0.4s;
+    z-index: 2;
+}
+
+#sidebar {
+    transition: 0.4s;
+position: fixed;
+    height: 100%;
+    width: 0%;
+    background: #222;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #0f9494;
+    grid-area: navbar;
+  box-shadow: 0 3px 28px rgba(0,0,0,0.25), 0 2px 10px rgba(0,0,0,0.22);
+}
+
+
+.container {
+    margin: 0 auto;
+    padding: 0em 2.5em;
+}
+
+.navcontainer {
+    margin: 0 auto;
+    padding: 0em 1.5em;
+}
+
+#navbarContent {
+    padding: 0.9em 0em;
+    position: relative;
+    font-size: 18px;
+    color:#fff;
+    font-weight: 600;
+    display:grid;
+    grid-template-columns: 8% 92%;
+}
+
+#content1content {
+    text-align: center;
+    color:white;
+    padding: 4em 0em;
+}
+
+#navbarContentMenu {
+    margin-left: 30px;
+}
+
+
+#content1header {
+    margin-bottom: 20px;
+}
+
+p.main {
+    font-size: 1em;
+}
+
+p.third {
+    line-height: 2em;
+    color:#888;
+    font-size: 1.0em;
+    text-align: left;
+}
+p.second {
+    line-height: 2em;
+    color:#444;
+    font-size: 1.05em
+}
+
+h1.main {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+h2.main {
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #0f9494;
+}
+
+#content-1 {
+    grid-area: content1;
+    background:linear-gradient(
+                     rgba(20,20,20, .3), 
+                     rgba(20,20,20, .3)), url(../img/coverimage.jpeg);
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+#content-2 {
+    grid-area: content2;
+}
+#content2content {
+    text-align: center;
+    padding:1em 0em;
+}
+
+.content2about{
+    padding: 1em 0em;
+}
+
+#content2button {
+    padding: 1em 0em;
+}
+
+#content2{
+    border:0;
+    background-color: #d53362;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3em;
+    padding: 0.2em 1em;
+    border-radius: 15px;
+}
+
+.spanLine {
+    margin: 19px auto;
+    border-radius: 10px;
+    text-align: center;
+    background: #d53362;
+    height:7px;
+    width:90px;
+    display: block;
+}
