@@ -242,7 +242,6 @@
         var box3 = document.getElementById('content3box3');
         var box3Top = (box3.offsetTop);
         var box3b = ((box3.offsetHeight) / 2 + box3Top);
-        var box3bottom = ((box3.offsetHeight) + box3Top);
 
 
         window.addEventListener('scroll', function(box2) {
@@ -265,7 +264,6 @@
             } else {
                 document.getElementById('content3scroll').classList.remove('fixed');
             }
-            
 
             // PART 1
             if (scrollAmount > box1Top) {
@@ -289,9 +287,7 @@
                 document.getElementById('part4').classList.add('red');
                 document.getElementById('part3').classList.remove('red');
             }
-            
-            }
-        )
+        })
 
         function openYear (evt, yearsName) {
             var i, box1, tablinks;
