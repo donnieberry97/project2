@@ -6,91 +6,314 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <title>Website 2</title>
 </head>
+
 <body>
 
-<div id="useMobile">
-    <h1>USE THIS ON MOBILE, DESKTOP VERSION NOT AVAILABLE</h1>
-</div>
+    <div id="useMobile">
+        <h1>USE THIS ON MOBILE, DESKTOP VERSION NOT AVAILABLE</h1>
+    </div>
 
-<div id="app">
-            <div id="navbarContentHamburgerClick">
-                <div id="navbarContentHamburger" @click="toggleMenu()">
+    <div id="app">
+        <div id="navbarContentHamburgerClick">
+            <div id="navbarContentHamburger" @click="toggleMenu()">
 
-                </div>
-            </div>
-<div id="gridContainer">
-   
-   <div id="desktopNavbar">
-       <div class="desktopnavcontainer">
-           <ul class="mainNav">
-               <li class="mainNav"><a href="#" class="active">Home</a>
-               <li class="mainNav"><a href="#">Projects</a>
-               <li class="mainNav"><a href="#">Gallery</a>
-               <li class="mainNav"><a href="#">Contact</a>
-           </ul>
-       </div>
-   </div>
-   
-    <div id="navbar">
-        <div class="navcontainer">
-            <div id="navbarContent">
-                <div id="navbarContentMenu">
-                        <h4>MENU</h4>
-                </div>
             </div>
         </div>
-    </div>
-<div id="sidebar" v-bind:class="{'open': isOpen}">
-           <ul class="sideNav">
-               <li class="sideNav"><a href="#" class="active">Home</a>
-               <li class="sideNav"><a href="#">Projects</a>
-               <li class="sideNav"><a href="#">Gallery</a>
-               <li class="sideNav"><a href="#">Contact</a>
-           </ul>
-</div>
-    <div id="content-1">
-        <div class="container">
-            <div id="content1content">
-                <div id="content1header">
-                    <h1 class="main">Loren Ipsum</h1>
+        <div id="gridContainer">
+
+            <div id="desktopNavbar">
+                <div class="desktopnavcontainer">
+                    <ul class="mainNav">
+                        <li class="mainNav"><a href="#" class="active">Home</a>
+                        <li class="mainNav"><a href="#">Projects</a>
+                        <li class="mainNav"><a href="#">Gallery</a>
+                        <li class="mainNav"><a href="#">Contact</a>
+                    </ul>
                 </div>
-                <div id="content1para">
-                    <p class="main">Donec aliquet pulvinar egestas ulla volutpat nisl sed</p>
+            </div>
+
+            <div id="navbar">
+                <div class="navcontainer">
+                    <div id="navbarContent">
+                        <div id="navbarContentMenu">
+                            <h4>MENU</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" v-bind:class="{'open': isOpen}">
+                <ul class="sideNav">
+                    <li class="sideNav"><a href="#" class="active">Home</a>
+                    <li class="sideNav"><a href="#">Projects</a>
+                    <li class="sideNav"><a href="#">Gallery</a>
+                    9<li class="sideNav"><a href="#">Contact</a>
+                </ul>
+            </div>
+            <div id="content-1">
+                <div class="container">
+                    <div id="content1content">
+                        <div id="content1header">
+                            <h1 class="main">Loren Ipsum</h1>
+                        </div>
+                        <div id="content1para">
+                            <p class="main">Donec aliquet pulvinar egestas ulla volutpat nisl sed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-2">
+                <div class="container">
+                    <div id="content2content">
+                        <h2 class="main">Fusce tempus, nisl nec tempor ullamcorper, massa metus ultrices massa.</h2>
+                        <span class="spanLine"></span>
+                        <p class="second">nec blandit lectus quam at nunc. Nulla tellus urna, eleifend at dictum et, imperdiet ac enim. Cras congue nisi vitae eros suscipit, et faucibus magna euismod. </p>
+                        <div class="content2container">
+                            <div class="content2about wrap1">
+                                <p class="third">Cras suscipit justo ac aliquet elementum. Phasellus quis diam posuere, sollicitudin quam eu, ultrices justo. Nunc nisl lacus, hendrerit a mattis at, rutrum nec leo. Morbi maximus hendrerit elit, vel tincidunt neque commodo ac. Aliquam erat volutpat. Nam faucibus lectus nisi, sit amet rutrum arcu viverra in. Nunc ultrices massa at viverra molestie.</p>
+                            </div>
+                            <div class="content2about wrap2">
+                                <p class="third">pellentesque commodo orci. Nam fringilla posuere ipsum. Donec condimentum placerat est, ac interdum magna porttitor ut. Duis pellentesque sagittis sagittis.</p>
+                            </div>
+                            <div id="content2button">
+                                <button id="content2">Read more</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div id="content-3">
+                <div id="content3content">
+                  <div id="whatwedone">
+                      <h3 class="whatwedone">What we have done?</h3>
+                  </div>
+                   <div id="content3tabs">
+                       <button class="tablinks" onclick="openYear(event, 'content3box1')" id="defaultYear">2015</button>
+                       <button class="tablinks" onclick="openYear(event, 'content3box2')">2016</button>
+                       <button class="tablinks" onclick="openYear(event, 'content3box3')">2017</button>
+                       <button class="tablinks" onclick="openYear(event, 'content3box4')">2018</button>
+                   </div>
+                    <div id="content3box1" class="contentbox box1">
+                       <div class="contentboxheader">
+                            <h2 class="year">2015</h2>
+                       </div>
+                      <div class="contentboxinfowrapper">
+                       <div class="contentboxinfo">
+                           <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel leo velit. Duis eget laoreet leo, nec tristique nibh. Etiam vel lacus molestie, dignissim quam a, placerat urna. Pellentesque nunc diam, fringilla id pulvinar eu.</p>
+                       </div>
+                       <span class="infoline2"></span>
+                        <div class="contentboxinfo">
+                           <p class="info">Ut eget felis vel velit elementum rutrum et eu purus. In fringilla felis et nibh scelerisque, ac luctus tortor aliquam. Praesent quis fringilla dolor.  Aliquet ipsum. Morbi cursus condimentum risus.</p>
+                       </div>
+                       </div>
+                        <div class="gridTest">
+                         <div class="authorBox">
+                            <div class="authorContent">
+                             <h5 class="author">First Last</h5>
+                             <h5 class="authorRole">Job role goes here</h5>
+                             <p class="authorQuote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu erat at nisl laoreet ultrices"</p>
+                             </div>
+                         </div>
+                         <div class="personContainer">
+                             <div class="personImg1"></div>
+                         </div>
+                        </div> 
+
+                    </div>
+                    <div id="content3box2" class="contentbox2 box1">
+                       <div class="contentboxheader">
+                            <h2 class="year">2016</h2>
+                       </div>
+                       <div class="contentboxinfowrapper">
+                       <div class="contentboxinfo">
+                           <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel leo velit. Duis eget laoreet leo, nec tristique nibh. Etiam vel lacus molestie, dignissim quam a, placerat urna. Pellentesque nunc diam, fringilla id pulvinar eu.</p>
+                       </div>
+                       <span class="infoline2"></span>
+                        <div class="contentboxinfo">
+                           <p class="info">Ut eget felis vel velit elementum rutrum et eu purus. In fringilla felis et nibh scelerisque, ac luctus tortor aliquam. Praesent quis fringilla dolor.  Aliquet ipsum. Morbi cursus condimentum risus.</p>
+                       </div>
+                       </div>
+                        <div class="gridTest">
+                         <div class="authorBox">
+                            <div class="authorContent">
+                             <h5 class="author">First Last</h5>
+                             <h5 class="authorRole">Job role goes here</h5>
+                             <p class="authorQuote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu erat at nisl laoreet ultrices"</p>
+                             </div>
+                         </div>
+                         <div class="personContainer">
+                             <div class="personImg1"></div>
+                         </div>
+                        </div> 
+                    </div>
+                    <div id="content3box3" class="contentbox box1">
+                       <div class="contentboxheader">
+                            <h2 class="year">2017</h2>
+                       </div>
+                       <div class="contentboxinfo">
+                           <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel leo velit. Duis eget laoreet leo, nec tristique nibh. Etiam vel lacus molestie, dignissim quam a, placerat urna. Pellentesque nunc diam, fringilla id pulvinar eu.</p>
+                       </div>
+                       <span class="infoline"></span>
+                        <div class="contentboxinfo">
+                           <p class="info">Ut eget felis vel velit elementum rutrum et eu purus. In fringilla felis et nibh scelerisque, ac luctus tortor aliquam. Praesent quis fringilla dolor.  Aliquet ipsum. Morbi cursus condimentum risus.</p>
+                       </div>
+                        <div class="gridTest">
+                         <div class="authorBox">
+                            <div class="authorContent">
+                             <h5 class="author">First Last</h5>
+                             <h5 class="authorRole">Job role goes here</h5>
+                             <p class="authorQuote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu erat at nisl laoreet ultrices"</p>
+                             </div>
+                         </div>
+                         <div class="personContainer">
+                             <div class="personImg1"></div>
+                         </div>
+                        </div> 
+                    </div>
+                    <div id="content3box4" class="contentbox2 box1">
+                       <div class="contentboxheader">
+                            <h2 class="year">2018</h2>
+                       </div>
+                       <div class="contentboxinfo">
+                           <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel leo velit. Duis eget laoreet leo, nec tristique nibh. Etiam vel lacus molestie, dignissim quam a, placerat urna. Pellentesque nunc diam, fringilla id pulvinar eu.</p>
+                       </div>
+                       <span class="infoline2"></span>
+                        <div class="contentboxinfo">
+                           <p class="info">Ut eget felis vel velit elementum rutrum et eu purus. In fringilla felis et nibh scelerisque, ac luctus tortor aliquam. Praesent quis fringilla dolor.  Aliquet ipsum. Morbi cursus condimentum risus.</p>
+                       </div>
+                        <div class="gridTest">
+                         <div class="authorBox">
+                            <div class="authorContent">
+                             <h5 class="author">First Last</h5>
+                             <h5 class="authorRole">Job role goes here</h5>
+                             <p class="authorQuote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu erat at nisl laoreet ultrices"</p>
+                             </div>
+                         </div>
+                         <div class="personContainer">
+                             <div class="personImg1"></div>
+                         </div>
+                        </div> 
+                    </div>
+                </div>
+                <div id="content3scroll">
+                    <div class="content3content">
+                        <h3 class="main" id="part1">Part 1</h3>
+                        <h3 class="main" id="part2">Part 2</h3>
+                        <h3 class="main" id="part3">Part 3</h3>
+                        <h3 class="main" id="part4">Part 4</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <div id="content-2">
-        <div class="container">
-            <div id="content2content">
-                <h2 class="main">Fusce tempus, nisl nec tempor ullamcorper, massa metus ultrices massa.</h2>
-                <span class="spanLine"></span>
-                <p class="second">nec blandit lectus quam at nunc. Nulla tellus urna, eleifend at dictum et, imperdiet ac enim. Cras congue nisi vitae eros suscipit, et faucibus magna euismod. </p>
-                <div class="content2container">
-                <div class="content2about wrap1">
-                    <p class="third">Cras suscipit justo ac aliquet elementum. Phasellus quis diam posuere, sollicitudin quam eu, ultrices justo. Nunc nisl lacus, hendrerit a mattis at, rutrum nec leo. Morbi maximus hendrerit elit, vel tincidunt neque commodo ac. Aliquam erat volutpat. Nam faucibus lectus nisi, sit amet rutrum arcu viverra in. Nunc ultrices massa at viverra molestie.</p>
-                </div>
-                <div class="content2about wrap2">
-                    <p class="third">pellentesque commodo orci. Nam fringilla posuere ipsum. Donec condimentum placerat est, ac interdum magna porttitor ut. Duis pellentesque sagittis sagittis.</p>
-                </div>
-                
-                <div id="content2button">
-                    <button id="content2">Read more</button>
-                </div>
-                
-                </div>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<script src="js/scripts.js"></script>
+    <footer id="footer">
+        <h6 class="footer">Donnie Berry</h6>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+    <script>
+        
+        
+        
+        // Defining Variables
+        var element = document.getElementById('content3scroll');
+        var elementTop = (element.offsetTop);
 
+        var nav = document.getElementById('desktopNavbar');
+        var navTop = (nav.offsetTop);
+        var navB = (nav.offsetHeight);
+        var navBottom = (navTop + navB);
+
+        var box1 = document.getElementById('content3box1');
+        var box1Top = (box1.offsetTop);
+        var box1b = ((box1.offsetHeight) / 2 + box1Top);
+
+        var box2 = document.getElementById('content3box2');
+        var box2Top = (box2.offsetTop);
+        var box2b = ((box2.offsetHeight) / 2 + box2Top);
+
+        var box3 = document.getElementById('content3box3');
+        var box3Top = (box3.offsetTop);
+        var box3b = ((box3.offsetHeight) / 2 + box3Top);
+        var box3bottom = ((box3.offsetHeight) + box3Top);
+
+
+        window.addEventListener('scroll', function(box2) {
+            console.log(box1b);
+            var scrollAmount = (window.pageYOffset);
+
+            /*console.log(scrollAmount);*/
+            console.log(scrollAmount);
+            console.log(box2b);
+
+            // STICKY NAV
+            if (scrollAmount > navBottom) {
+                document.getElementById('desktopNavbar').className = 'fixed2';
+            } else {
+                document.getElementById('desktopNavbar').classList.remove('fixed2');
+            }
+            // ADD FIXED CLASS TO SIDEBAR
+            if (scrollAmount > box1Top) {
+                document.getElementById('content3scroll').className = 'fixed';
+            } else {
+                document.getElementById('content3scroll').classList.remove('fixed');
+            }
+            
+
+            // PART 1
+            if (scrollAmount > box1Top) {
+                document.getElementById('part1').classList.add('red');
+                document.getElementById('part2').classList.remove('red');
+            }
+            // PART 2
+            if (scrollAmount > box1b) {
+                document.getElementById('part2').classList.add('red');
+                document.getElementById('part1').classList.remove('red');
+                document.getElementById('part3').classList.remove('red');
+            }
+            // PART 3
+            if (scrollAmount > box2b) {
+                document.getElementById('part3').classList.add('red');
+                document.getElementById('part2').classList.remove('red');
+                document.getElementById('part4').classList.remove('red');
+            }
+            // PART 4
+            if (scrollAmount > box3b) {
+                document.getElementById('part4').classList.add('red');
+                document.getElementById('part3').classList.remove('red');
+                document.getElementById('content3scroll').classList.remove('fixed');
+                document.getElementById('content3scroll').classList.add('absolute');
+            }
+            
+            }
+        )
+
+        function openYear (evt, yearsName) {
+            var i, box1, tablinks;
+            
+            box1 = document.getElementsByClassName("box1");
+                for (i = 0; i < box1.length; i++) {
+        box1[i].style.display = "none";
+    }
+            
+                document.getElementById(yearsName).style.display = "block";
+        }
+        
+var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+        
+        if (width < 768) {
+        document.getElementById("defaultYear").click();
+        }
+
+    </script>
 </body>
 </html>
