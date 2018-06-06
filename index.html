@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+>
+
+
     <title>Website 2</title>
 </head>
 
@@ -212,9 +216,71 @@
             </div>
             
         <div id="content4">
-            <div class="container">
+            <div class="container4">
                 <div id="content4content">
-                    <h1 class="main">test</h1>
+                    <div class="content4boxarea">
+                       <div class="content4boxheader">
+                           <h3 class="content4">Starter</h3>
+                       </div>
+                        <div class="content4box">
+                            <h4 class="content4boxPrice">£25</h4>
+                            <h5 class="content4boxMonths">/mo</h5>
+                            
+                            <div class="content4compare">
+                                <ul class="fa-ul">
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-check" style="color: green"></i></span>Lorem ipsum dolor sit amet</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-times" style="color: red"></i></span>Nulla purus ligula, euismod nec arcu eget</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-times" style="color: red"></i></span>Aenean sollicitudin finibus erat id suscipit</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-times" style="color: red"></i></span>Integer porta, turpis nec aliquam posuere</li>
+                                </ul>
+                            </div>
+                            <div class="boxButton">
+                                <button class="box">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content4boxarea">
+                       <div class="content4boxheader">
+                           <h3 class="content4">Middle</h3>
+                       </div>
+                        <div class="content4box">
+                            <h4 class="content4boxPrice">£35</h4>
+                            <h5 class="content4boxMonths">/mo</h5>
+                            <div class="content4compare">
+                                <ul class="fa-ul">
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-check" style="color: green"></i></span>Lorem ipsum dolor sit amet</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-check" style="color: green"></i></span>Nulla purus ligula, euismod nec arcu eget</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-times" style="color: red"></i></span>Aenean sollicitudin finibus erat id suscipit</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-times" style="color: red"></i></span>Integer porta, turpis nec aliquam posuere</li>
+                                </ul>
+                            </div>
+                            <div class="boxButton">
+                                <button class="box">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content4boxarea">
+                       <div class="content4boxheader">
+                           <h3 class="content4">Premium</h3>
+                       </div>
+                        <div class="content4box">
+                            <h4 class="content4boxPrice">£50</h4>
+                            <h5 class="content4boxMonths">/mo</h5>
+                            <div class="content4compare">
+                                <ul class="fa-ul">
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-check" style="color: green"></i></span>Lorem ipsum dolor sit amet</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-check" style="color: green"></i></span>Nulla purus ligula, euismod nec arcu eget</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-check" style="color: green"></i></span>Aenean sollicitudin finibus erat id suscipit</li>
+                                    <li class="compare"><span class="fa-li"><i class="fas fa-check" style="color: green"></i></span>Integer porta, turpis nec aliquam posuere</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="boxButton">
+                                <button class="box">Subscribe</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>    
@@ -231,91 +297,6 @@
         
         
         
-        // Defining Variables
-        var element = document.getElementById('content3scroll');
-        var elementTop = (element.offsetTop);
-
-        var nav = document.getElementById('desktopNavbar');
-        var navTop = (nav.offsetTop);
-        var navB = (nav.offsetHeight);
-        var navBottom = (navTop + navB);
-
-        var box1 = document.getElementById('content3box1');
-        var box1Top = (box1.offsetTop);
-        var box1b = ((box1.offsetHeight) / 2 + box1Top);
-
-        var box2 = document.getElementById('content3box2');
-        var box2Top = (box2.offsetTop);
-        var box2b = ((box2.offsetHeight) / 2 + box2Top);
-
-        var box3 = document.getElementById('content3box3');
-        var box3Top = (box3.offsetTop);
-        var box3b = ((box3.offsetHeight) / 2 + box3Top);
-
-
-        window.addEventListener('scroll', function(box2) {
-            console.log(box1b);
-            var scrollAmount = (window.pageYOffset);
-
-            /*console.log(scrollAmount);*/
-            console.log(scrollAmount);
-            console.log(box2b);
-
-            // STICKY NAV
-            if (scrollAmount > navBottom) {
-                document.getElementById('desktopNavbar').className = 'fixed2';
-            } else {
-                document.getElementById('desktopNavbar').classList.remove('fixed2');
-            }
-            // ADD FIXED CLASS TO SIDEBAR
-            if (scrollAmount > box1Top) {
-                document.getElementById('content3scroll').className = 'fixed';
-            } else {
-                document.getElementById('content3scroll').classList.remove('fixed');
-            }
-
-            // PART 1
-            if (scrollAmount > box1Top) {
-                document.getElementById('part1').classList.add('red');
-                document.getElementById('part2').classList.remove('red');
-            }
-            // PART 2
-            if (scrollAmount > box1b) {
-                document.getElementById('part2').classList.add('red');
-                document.getElementById('part1').classList.remove('red');
-                document.getElementById('part3').classList.remove('red');
-            }
-            // PART 3
-            if (scrollAmount > box2b) {
-                document.getElementById('part3').classList.add('red');
-                document.getElementById('part2').classList.remove('red');
-                document.getElementById('part4').classList.remove('red');
-            }
-            // PART 4
-            if (scrollAmount > box3b) {
-                document.getElementById('part4').classList.add('red');
-                document.getElementById('part3').classList.remove('red');
-            }
-        })
-
-        function openYear (evt, yearsName) {
-            var i, box1, tablinks;
-            
-            box1 = document.getElementsByClassName("box1");
-                for (i = 0; i < box1.length; i++) {
-        box1[i].style.display = "none";
-    }
-            
-                document.getElementById(yearsName).style.display = "block";
-        }
-        
-var width = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.body.clientWidth;
-        
-        if (width < 768) {
-        document.getElementById("defaultYear").click();
-        }
 
     </script>
 </body>
