@@ -100,7 +100,7 @@ var width = window.innerWidth
         function paraAppear() {
         var para1 = document.querySelector('.wrap1');
         var para2 = document.querySelector('.wrap2');
-        var paraPos = para1.getBoundingClientRect().top + 200;
+        var paraPos = para1.getBoundingClientRect().top;
         var ScreenPos = window.innerHeight;
             
             if (paraPos < ScreenPos) {
